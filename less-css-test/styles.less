@@ -1,6 +1,22 @@
 @width: 10px;
 @height: @width + 10px;
 @color: green;
+@link-color: #428bca;
+@link-color-hover: darken(@link-color, 10%);
+
+a,
+.link {
+  color: @link-color;
+}
+
+a:hover {
+  color: @link-color-hover;
+}
+
+.widget {
+  color: #fff;
+  background: @link-color;
+}
 
 #header {
   width: @width;
