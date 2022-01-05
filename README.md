@@ -7,3 +7,4 @@ Includes
 - Socket Test I used to test the sockets in _muzika_
 - Less CSS test
 - Stylus CSS test
+- Coffeescript test
