@@ -3,6 +3,7 @@
 @color: green;
 @link-color: #428bca;
 @link-color-hover: darken(@link-color, 10%);
+@my-selector: banner;
 
 a,
 .link {
@@ -22,4 +23,10 @@ a:hover {
   width: @width;
   color: @color;
   height: @height;
+}
+
+.@{my-selector} {
+  font-weight: bold;
+  line-height: 40px;
+  margin: 0 auto;
 }
