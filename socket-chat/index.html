@@ -29,6 +29,8 @@
         flex-grow: 1;
         border-radius: 2rem;
         margin: 0.25rem;
+        zoom: 1;
+        font-size: 3vw;
       }
 
       #input:focus {
@@ -53,6 +55,7 @@
 
       #messages > li {
         padding: 0.5rem 1rem;
+        font-size: 3vw;
       }
     </style>
   </head>
@@ -77,10 +80,10 @@
       form.addEventListener("submit", function (e) {
         e.preventDefault();
         if (input.value) {
-            const payload = {
-                userName : username.value,
-                text : input.value
-            }
+          const payload = {
+            userName: username.value,
+            text: input.value,
+          };
           socket.emit("chat message", JSON.stringify(payload));
           input.value = "";
         }
@@ -88,8 +91,8 @@
 
       socket.on("chat message", function (msg) {
         var item = document.createElement("li");
-        const payload= JSON.parse(msg);
-        item.innerHTML = `<b>${payload.userName}</b> : ${payload.text}`
+        const payload = JSON.parse(msg);
+        item.innerHTML = `<b>${payload.userName}</b> : ${payload.text}`;
         messages.appendChild(item);
         window.scrollTo(0, document.body.scrollHeight);
       });
